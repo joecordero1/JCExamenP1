@@ -4,7 +4,7 @@ namespace JCExamenP1.Models
 {
     public class JCordero
     {
-        [Required]
+        
         [Key]
         public int JCId { get; set; }
 
@@ -14,10 +14,10 @@ namespace JCExamenP1.Models
         [Range(0.01, 9999.99)]
         public decimal JCPrecio { get; set; }
 
-        [Range(typeof(bool), "false", "false", ErrorMessage = "No aceptamos equipos remanofacturados")]
+        [Range(typeof(bool), "false", "false")]
         public bool JCRemanofacturado { get; set; }
 
-        [RegularExpression("[1-9]{2}/[0-9]{2}/[0-9]{4}")]//Expresión regular para valiar fecha
+        [Required]
         public DateTime FechaFabriacion { get; set; }
 
 
