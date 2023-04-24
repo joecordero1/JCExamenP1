@@ -1,66 +1,26 @@
-﻿namespace JCExamenP1.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace JCExamenP1.Models
 {
     public class JCordero
     {
+        [Required]
         public int JCId { get; set; }
+
+        [StringLength(50, MinimumLength = 5)]
         public string? JCModelo { get; set; }
+
+        [Range(0.01, 9999.99)]
         public decimal JCPrecio { get; set; }
-        public bool JCTieneTarjetaGrafica { get; set; }
-        public DateTime Fecha { get; set; }
+
+        [Range(typeof(bool), "false", "false", ErrorMessage = "No aceptamos equipos remanofacturados")]
+        public bool JCRemanofacturado { get; set; }
+
+        [RegularExpression("[1-9]{2}/[0-9]{2}/[0-9]{4}")]//Expresión regular para valiar fecha
+        public DateTime FechaFabriacion { get; set; }
 
 
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*ConcurrencyCheck
-Key
-MaxLength
-Required
-StringLength
-Timestamp
-
-
-        https://udlaec-my.sharepoint.com/personal/joe_cordero_udla_edu_ec/_layouts/15/Doc.aspx?sourcedoc={093a5263-d4ed-456a-a60a-5817ec50886c}&action=edit&wd=target%28Semana%201.one%7C5417e711-8662-46e3-bd67-f57b44f97c53%2FP%C3%A1gina%20sin%20t%C3%ADtulo%7C5954330f-cab4-4f2b-ad8d-130bb0e7fe8b%2F%29&wdorigin=NavigationUrl
-
-
-        */
     }
 }
