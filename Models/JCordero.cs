@@ -2,8 +2,12 @@
 {
     public class JCordero
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int JCId { get; set; }
+        public string? JCModelo { get; set; }
+        public decimal JCPrecio { get; set; }
+        public bool JCTieneTarjetaGrafica { get; set; }
+        public DateTime Fecha { get; set; }
+
 
 
 
