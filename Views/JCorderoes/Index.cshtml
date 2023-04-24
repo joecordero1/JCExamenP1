@@ -1,0 +1,53 @@
+﻿@model IEnumerable<JCExamenP1.Models.JCordero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JCModelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JCPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JCRemanofacturado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFabriacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JCModelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JCPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JCRemanofacturado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFabriacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.JCId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.JCId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.JCId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

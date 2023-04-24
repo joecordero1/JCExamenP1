@@ -1,0 +1,42 @@
+﻿@model JCExamenP1.Models.JCordero
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>JCordero</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JCModelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JCModelo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JCPrecio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JCPrecio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JCRemanofacturado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JCRemanofacturado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaFabriacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaFabriacion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.JCId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

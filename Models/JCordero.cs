@@ -5,6 +5,7 @@ namespace JCExamenP1.Models
     public class JCordero
     {
         [Required]
+        [Key]
         public int JCId { get; set; }
 
         [StringLength(50, MinimumLength = 5)]
