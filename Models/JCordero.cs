@@ -14,7 +14,7 @@ namespace JCExamenP1.Models
         [Range(0.01, 9999.99)]
         public decimal JCPrecio { get; set; }
 
-        [Range(typeof(bool), "false", "false")]
+        [Range(typeof(bool), "false", "false",ErrorMessage ="No aceptamos equipos remanofacturados")]
         public bool JCRemanofacturado { get; set; }
 
         [Required]
